@@ -1,7 +1,8 @@
 FROM ubuntu:focal
 
-# Install curl
-RUN apt-get update -y && apt-get install -y curl vim
+# Install curl and vim
+RUN apt-get update -y
+RUN apt-get install -y curl vim
 
 # Download inspec deb
 RUN curl https://omnitruck.chef.io/install.sh | bash -s -- -P inspec
